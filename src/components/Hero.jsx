@@ -9,10 +9,10 @@ export default function Hero() {
           Developing Champions On and Off the Pitch
         </p>
         <div className="space-x-4">
-          <button className="bg-amber-200 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-amber-300 transition">
+          <button className="bg-amber-600 text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-amber-300 transition">
             Enroll Now
           </button>
-          <button className="border-2 border-amber-500 text-amber-500 px-8 py-3 rounded-lg font-bold hover:bg-amber-500 hover:text-gray-900 transition">
+          <button className="border-2 border-b-blue-500 text-blue-400 px-8 py-3 rounded-lg font-bold hover:bg-blue-500 hover:text-gray-900 transition">
             Learn More
           </button>
         </div>
