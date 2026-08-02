@@ -1,1 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Poppins:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
+
+:root {
+  --font-hero: 'Staatliches', 'Righteous', 'Poppins', sans-serif;
+}
+
+/* Utility class for hero headline */
+.font-hero {
+  font-family: var(--font-hero);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+@import "tailwindcss";
+
+:root {
+  --font-hero: 'Righteous', 'Poppins', sans-serif;
+}
+n/* Utility class for hero headline */
+.font-hero {
+  font-family: var(--font-hero);
+}
