@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../images/arise_shine-logo.png'
 
 export default function Footer() {
   return (
@@ -6,7 +7,10 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold text-amber-500 mb-4">Arise & Shine</h3>
+            <div className="flex items-center space-x-2 mb-4">
+              <img src={logo} alt="Arise and Shine Logo" className="h-8 w-8 object-contain" />
+              <h3 className="text-xl font-bold text-amber-500">Arise & Shine</h3>
+            </div>
             <p className="text-gray-400">Developing champions on and off the pitch.</p>
           </div>
           <div>

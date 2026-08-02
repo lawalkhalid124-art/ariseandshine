@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
+import logo from '../images/arise_shine-logo.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="bg-gray-900 text-white shadow-lg">
+    <nav className="bg-white text-gray-900 shadow-lg">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-red-600 rounded-full flex items-center justify-center font-bold text-white shadow">
-              AS
-            </div>
+            <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain" />
             <span className="text-xl font-bold">Arise & Shine</span>
           </div>
 
