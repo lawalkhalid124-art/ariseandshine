@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Poppins:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
-  --font-hero: 'Staatliches', 'Righteous', 'Poppins', sans-serif;
+  --font-hero: 'Tourney', 'Staatliches', 'Righteous', 'Poppins', sans-serif;
 }
 
 /* Utility class for hero headline */
@@ -11,6 +12,7 @@
   font-family: var(--font-hero);
   letter-spacing: 0.02em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 @import "tailwindcss";
 
