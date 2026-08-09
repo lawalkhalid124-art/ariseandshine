@@ -6,6 +6,7 @@ import { MenuToggleIcon } from '@/components/ui/menu-toggle-icon';
 import { useScroll } from '@/components/ui/use-scroll';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
+import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button';
 
 export function Header() {
 	const [open, setOpen] = React.useState(false);
@@ -66,8 +67,8 @@ export function Header() {
 							{link.label}
 						</Link>
 					))}
-					<Button variant="outline" className="border-amber-500/50 text-amber-400 hover:bg-amber-500/10">Contact</Button>
-					<Button className="bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white">Enroll Now</Button>
+					<InteractiveHoverButton text="Contact" className="border-amber-500/50 text-amber-400 w-28" />
+					<InteractiveHoverButton text="Enroll Now" className="bg-gradient-to-r from-amber-500 to-red-600 text-white border-amber-500 w-32" />
 				</div>
 				<Button
 					size="icon"
@@ -98,10 +99,8 @@ export function Header() {
 					))}
 				</div>
 				<div className="flex flex-col gap-2">
-					<Button variant="outline" className="w-full bg-transparent border-amber-500/50 text-amber-400">
-						Contact
-					</Button>
-					<Button className="w-full bg-gradient-to-r from-amber-500 to-red-600 hover:from-amber-600 hover:to-red-700 text-white">Enroll Now</Button>
+					<InteractiveHoverButton text="Contact" className="w-full border-amber-500/50 text-amber-400" />
+					<InteractiveHoverButton text="Enroll Now" className="w-full bg-gradient-to-r from-amber-500 to-red-600 text-white border-amber-500" />
 				</div>
 			</MobileMenu>
 		</header>

@@ -7,19 +7,9 @@
   --font-hero: 'Tourney', 'Staatliches', 'Righteous', 'Poppins', sans-serif;
 }
 
-/* Utility class for hero headline */
 .font-hero {
   font-family: var(--font-hero);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   font-weight: 700;
-}
-@import "tailwindcss";
-
-:root {
-  --font-hero: 'Righteous', 'Poppins', sans-serif;
-}
-n/* Utility class for hero headline */
-.font-hero {
-  font-family: var(--font-hero);
 }

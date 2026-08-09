@@ -1,4 +1,5 @@
 import React from 'react'
+import { InteractiveHoverButton } from './ui/interactive-hover-button'
 
 export default function Membership() {
   const plans = [
@@ -14,15 +15,17 @@ export default function Membership() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {plans.map(plan => (
-            <div key={plan.id} className="rounded-lg p-6 bg-gradient-to-br from-amber-200 to-amber-400 hover:from-amber-300 hover:to-red-500 transition shadow-md">
+            <div key={plan.id} className="rounded-lg p-6 bg-gradient-to-br from-amber-200 to-amber-400 hover:from-amber-300 hover:to-red-500 transition shadow-md flex flex-col">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{plan.name}</h3>
               <p className="text-3xl font-extrabold text-gray-900 mb-4">{plan.price}</p>
-              <ul className="mb-6 space-y-2">
+              <ul className="mb-6 space-y-2 flex-grow">
                 {plan.perks.map((p, i) => (
                   <li key={i} className="text-gray-700">• {p}</li>
                 ))}
               </ul>
-              <button className="w-full bg-red-600 text-white py-2 rounded-lg font-bold hover:bg-red-700 transition">Join {plan.name}</button>
+              <div className="flex justify-center mt-4">
+                <InteractiveHoverButton text={`Join ${plan.name}`} className="bg-red-600 text-white border-red-600 w-56 h-14 text-base !p-3 !rounded-2xl" />
+              </div>
             </div>
           ))}
         </div>

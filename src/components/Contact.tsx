@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { InteractiveHoverButton } from '@/components/ui/interactive-hover-button'
+import { InteractiveHoverButton } from './ui/interactive-hover-button'
 
 interface FormData {
   name: string;
@@ -71,7 +71,7 @@ export default function Contact() {
             </div>
             <div className="mt-8 pt-8 border-t border-gray-300">
               <p className="text-gray-700 font-semibold mb-4">Ready to join us?</p>
-              <InteractiveHoverButton text="Enroll Now" className="bg-amber-500 text-gray-900 border-amber-500 hover:text-white" />
+              <InteractiveHoverButton text="Enroll Now" className="bg-amber-500 text-gray-900 border-amber-500 w-56 h-14 text-base !p-3 !rounded-2xl" />
             </div>
           </div>
 
@@ -111,12 +111,7 @@ export default function Contact() {
               required
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-500"
             />
-            <button
-              type="submit"
-              className="w-full bg-amber-500 text-gray-900 py-3 rounded-lg font-bold hover:bg-amber-600 transition"
-            >
-              Send Message
-            </button>
+            <InteractiveHoverButton text="Send Message" className="w-full bg-amber-500 text-gray-900 border-amber-500 h-14 text-base !p-3 !rounded-xl" />
           </form>
         </div>
       </div>
