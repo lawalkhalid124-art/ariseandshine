@@ -1,0 +1,14 @@
+{
+  "siteTitle": "Arise & Shine Football Academy",
+  "motto": "IN GOD WE TRUST",
+  "founded": "March 17, 2012",
+  "vision": "To groom and develop young kids from the slum into professional footballers and responsible leaders who will represent Nigeria and the world with pride.",
+  "mission": "To achieve this vision through hard work, discipline, moral values, and character values. \"We don't just build footballers. We build MEN OF CHARACTER.\"",
+  "coreValues": [
+    {"title":"Discipline","desc":"On the pitch, in the classroom, and in life."},
+    {"title":"Dedication","desc":"Consistency and commitment to growth."},
+    {"title":"Development","desc":"Technical, tactical, physical, and mental growth."},
+    {"title":"Dominance","desc":"Winning with character and excellence."}
+  ],
+  "accreditations":["Registered with Ikorodu Divisional Football Association (IDFA)","Affiliated — Lagos State Football Association (LSFA)","Certified Youth Development Academy","Community Grassroots Football Partner","NFF registration: IN PROGRESS (client to update)"]
+}
