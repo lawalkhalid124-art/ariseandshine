@@ -1,44 +1,83 @@
-/* Arise & Shine FA — Mobile-first CSS */
+/* Arise & Shine FA — Theme tokens, fonts, badge, and scroll-reveal styles */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Tourney:wght@700&family=Staatliches&display=swap');
+
 :root{
   --green:#0b7a3a; /* primary */
   --gold:#d4a017; /* accent */
-  --dark:#111214; /* text */
+  --dark:#0f1720; /* deep charcoal for text */
+  --white:#ffffff; /* background */
   --muted:#6b6b6b;
   --max-width:1100px;
+  --container-padding:1rem;
 }
 *{box-sizing:border-box}
-body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--dark);margin:0;line-height:1.45;background:#fff}
-.container{padding:1rem;max-width:var(--max-width);margin:0 auto}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
+html,body{height:100%}
+body{font-family:'Oswald', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;color:var(--dark);margin:0;line-height:1.45;background:var(--white)}
+.container{padding:var(--container-padding);max-width:var(--max-width);margin:0 auto}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .brand{display:flex;gap:.75rem;align-items:center}
-.crest{background:var(--green);color:#fff;padding:.35rem .6rem;border-radius:.35rem;font-weight:700}
-.site-title{margin:0;font-size:1rem}
-.motto{font-size:.8rem;color:var(--muted)}
-.nav-toggle{display:block;background:none;border:0;font-size:1.25rem}
-.site-nav{display:none;gap:1rem}
-.site-nav a{color:var(--dark);text-decoration:none}
+.crest{background:var(--green);color:var(--white);padding:.4rem .65rem;border-radius:.45rem;font-weight:800;letter-spacing:0.03em}
+.site-title{margin:0;font-size:1rem;font-weight:700}
+.motto{font-size:.78rem;color:var(--muted);font-weight:600}
+/* Desktop nav (hidden on small screens) */
+.desktop-nav{display:none}
+.desktop-nav .nav-link{margin:0 0.45rem;color:var(--dark);text-decoration:none;font-weight:600}
+/* Header actions */
+.header-actions{display:flex;align-items:center;gap:.5rem}
+.hamburger{background:transparent;border:0;font-size:1.35rem;padding:.35rem;border-radius:.35rem}
+.hamburger:focus{outline:3px solid rgba(11,122,58,0.15)}
+
+/* CTA button in header uses gold accent */
+.btn.cta-gold{background:var(--gold);color:var(--dark);padding:.5rem .9rem;border-radius:999px;border:2px solid rgba(0,0,0,0.06);font-weight:800}
+
+/* Sticky / transparent header that solidifies on scroll */
+.site-header.header-1{position:fixed;top:0;left:0;right:0;z-index:1100;padding:.5rem 0;transition:background-color .28s ease,box-shadow .28s ease,backdrop-filter .28s ease}
+.site-header.header-1{background:transparent}
+.site-header.header-1.scrolled{background:linear-gradient(180deg, rgba(11,122,58,0.98), rgba(11,122,58,0.98));box-shadow:0 6px 18px rgba(3,10,8,0.12);backdrop-filter:saturate(1.1) blur(2px)}
+.site-header.header-1.scrolled .site-title, .site-header.header-1.scrolled .desktop-nav .nav-link{color:var(--white)}
+
+/* Mobile menu overlay */
+.mobile-menu{position:fixed;inset:0;z-index:1200;pointer-events:none;opacity:0;transform:translateY(-6%);transition:opacity .28s ease,transform .28s ease}
+.mobile-menu.open{pointer-events:auto;opacity:1;transform:none}
+.mobile-menu-inner{background:linear-gradient(180deg,var(--white),#fbfbfb);height:100%;padding:1.25rem}
+.mobile-close{background:transparent;border:0;font-size:1.25rem;float:right}
+.mobile-nav{display:flex;flex-direction:column;gap:1rem;margin-top:1rem}
+.mobile-nav-link{font-size:1.1rem;padding:.75rem 0;color:var(--dark);text-decoration:none}
+.mobile-nav .btn.fullwidth{display:block;margin-top:1rem}
+
+/* Responsive rules: show desktop nav at larger sizes */
+@media(min-width:720px){
+  .desktop-nav{display:flex;align-items:center}
+  .mobile-menu{display:none}
+  .hamburger{display:none}
+}
+
 
 /* Hero */
 .hero{background:linear-gradient(180deg, rgba(11,122,58,0.06), rgba(212,160,23,0.02));padding:1.25rem 0}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:1rem;align-items:center}
-.hero-title{margin:.25rem 0;font-size:1.4rem;color:var(--green)}
-.hero-tag{margin:.5rem 0;color:#222}
+.hero-title{margin:.25rem 0;font-size:1.6rem;color:var(--green);}
+.hero-tag{margin:.5rem 0;color:var(--dark)}
 .hero-ctas{display:flex;gap:.5rem;flex-wrap:wrap}
-.btn{display:inline-block;padding:.6rem 1rem;border-radius:.35rem;text-decoration:none;font-weight:600}
-.btn.primary{background:var(--green);color:#fff}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:.35rem;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--green);color:var(--white)}
 .btn.outline{background:transparent;border:2px solid var(--green);color:var(--green)}
-.badge{margin-top:.75rem;background:var(--gold);color:#0d0d0d;padding:.35rem .6rem;border-radius:.35rem;font-weight:700;display:inline-block}
-.hero-image{background:#e9e9e9;border-radius:.5rem;padding:2.5rem;text-align:center;color:var(--muted)}
+
+/* Reusable badge (pill / crest) */
+.badge{display:inline-block;padding:.45rem .85rem;border-radius:999px;background:var(--gold);color:var(--dark);font-weight:800;font-size:.9rem;box-shadow:0 2px 6px rgba(11,122,58,0.08);}
 
 /* Sections */
 section{margin:1.25rem 0}
+/* Apply hero/display font to main section headlines consistently */
+section > h2, .hero-title {font-family:'Tourney','Staatliches', 'Oswald', sans-serif; font-weight:700; letter-spacing:0.02em}
+
 .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
-.card{background:#fff;border:1px solid #eee;padding:.75rem;border-radius:.5rem}
+.card{background:var(--white);border:1px solid #eee;padding:.75rem;border-radius:.5rem}
 .values-long h4{margin:.5rem 0 0}
 .grid-2{display:grid;grid-template-columns:1fr;gap:1rem}
 .achievement-item{background:#fbfbf8;border-left:4px solid var(--gold);padding:.75rem}
 .accredit-list{display:flex;flex-direction:column;gap:.5rem}
-.cta-band{background:var(--green);color:#fff;padding:.75rem}
+.cta-band{background:var(--green);color:var(--white);padding:.75rem}
 .cta-inner{display:flex;flex-direction:column;gap:.75rem;align-items:flex-start}
 .cta-actions{display:flex;gap:.5rem}
 
@@ -54,6 +93,10 @@ section{margin:1.25rem 0}
 .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem}
 .photo{background:#f3f3f3;padding:2rem;border-radius:.35rem;text-align:center;color:var(--muted)}
 
+/* Scroll-reveal initial and revealed states */
+.reveal-section{opacity:0;transform:translateY(18px);transition:opacity .6s ease-out, transform .6s cubic-bezier(.2,.9,.2,1)}
+.reveal-section.reveal{opacity:1;transform:none}
+
 /* Responsive larger screens */
 @media(min-width:720px){
   .site-nav{display:flex}
@@ -67,3 +110,22 @@ section{margin:1.25rem 0}
 
 /* Accessibility */
 .btn:focus,.nav-toggle:focus{outline:3px solid rgba(11,122,58,0.25);outline-offset:2px}
+
+/* Display / hero font utility */
+.font-hero{font-family:'Tourney','Staatliches', 'Oswald', sans-serif;letter-spacing:0.03em}
+
+/* Full-bleed hero variations (used by React Hero component) */
+.hero-fullbleed{position:relative;overflow:hidden}
+.hero-fullbleed .hero-media{position:absolute;inset:0;z-index:0}
+.hero-fullbleed .hero-media img,.hero-fullbleed .hero-media .placeholder{width:100%;height:100%;object-fit:cover;display:block}
+.hero-fullbleed .hero-overlay{position:relative;z-index:1;padding:3.5rem 1rem 4rem;background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.02));color:var(--white)}
+.hero-fullbleed .hero-inner{max-width:var(--max-width);margin:0 auto}
+.hero-fullbleed .hero-headline{font-size:2rem;margin:0 0 .5rem}
+.hero-fullbleed .hero-sub{font-size:1rem;margin:0 0 1rem;color:rgba(255,255,255,0.9)}
+.champions-badge{background:var(--gold);color:var(--dark);display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .9rem;border-radius:999px;font-weight:800}
+
+@media(min-width:720px){
+  .hero-fullbleed .hero-overlay{padding:4.5rem 2rem 6rem}
+  .hero-fullbleed .hero-headline{font-size:3rem}
+  .hero-fullbleed .hero-sub{font-size:1.125rem}
+}

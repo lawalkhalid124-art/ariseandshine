@@ -8,43 +8,76 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header header-1">
     <div class="container header-inner">
       <div class="brand">
         <div class="crest">ASFA</div>
-        <div>
-          <h1 class="site-title">Arise &amp; Shine Football Academy</h1>
+        <div class="brand-text">
+          <div class="site-title">Arise &amp; Shine Football Academy</div>
           <div class="motto">IN GOD WE TRUST</div>
         </div>
       </div>
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false">☰</button>
-      <nav class="site-nav" id="site-nav">
+      <nav class="desktop-nav" id="site-nav" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="programs.html">Programs</a>
+        <a href="teams.html">Teams</a>
+        <a href="coaching.html">Coaching Staff</a>
+        <a href="players.html">Players</a>
         <a href="achievements.html">Achievements</a>
+        <a href="news.html">News</a>
         <a href="gallery.html">Gallery</a>
-        <a href="get-involved.html">Get Involved</a>
+        <a href="membership.html">Membership</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="header-actions">
+        <a class="btn cta-gold" href="get-involved.html#enroll">Enroll Now</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" role="dialog" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button class="mobile-close" aria-label="Close menu">✕</button>
+        <nav class="mobile-nav">
+          <a class="mobile-nav-link" href="index.html">Home</a>
+          <a class="mobile-nav-link" href="about.html">About</a>
+          <a class="mobile-nav-link" href="programs.html">Programs</a>
+          <a class="mobile-nav-link" href="teams.html">Teams</a>
+          <a class="mobile-nav-link" href="coaching.html">Coaching Staff</a>
+          <a class="mobile-nav-link" href="players.html">Players</a>
+          <a class="mobile-nav-link" href="achievements.html">Achievements</a>
+          <a class="mobile-nav-link" href="news.html">News</a>
+          <a class="mobile-nav-link" href="gallery.html">Gallery</a>
+          <a class="mobile-nav-link" href="membership.html">Membership</a>
+          <a class="mobile-nav-link" href="contact.html">Contact</a>
+          <a class="btn cta-gold fullwidth" href="get-involved.html#enroll">Enroll Now</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h2 class="hero-title">Arise &amp; Shine FA — Ikorodu Champions</h2>
-          <p class="hero-tag">Grooming young boys from the slum into professional footballers and responsible leaders.</p>
-          <div class="hero-ctas">
-            <a class="btn primary" href="get-involved.html#enroll">Enroll Your Child</a>
-            <a class="btn outline" href="get-involved.html#partner">Partner / Sponsor</a>
+    <section class="hero hero-fullbleed reveal-section" aria-label="Hero — Arise &amp; Shine Football Academy">
+      <div class="hero-media" aria-hidden="true">
+        <div class="placeholder">[PLACEHOLDER: training/match photo or video — replace with real image]</div>
+      </div>
+
+      <div class="hero-overlay">
+        <div class="hero-inner">
+          <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+            <div class="champions-badge" aria-hidden>2026 IKORODU DIVISIONAL LEAGUE CHAMPIONS 🏆</div>
+            <div style="flex:1"></div>
           </div>
-          <div class="badge">2026 Ikorodu Divisional League Champions 🏆</div>
-        </div>
-        <div class="hero-media">
-          <div class="hero-image" aria-hidden="true">[PLACEHOLDER: Hero photo or video of players in action — replace with real photo]</div>
+
+          <h1 class="hero-headline font-hero">ARISE &amp; SHINE FOOTBALL ACADEMY</h1>
+          <p class="hero-sub"><strong>IN GOD WE TRUST</strong> — Raising champions on and off the pitch since 2012.</p>
+
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1rem">
+            <a class="btn primary" href="membership.html">Enroll Your Child</a>
+            <a class="btn outline" href="about.html">Our Story</a>
+          </div>
         </div>
       </div>
     </section>
