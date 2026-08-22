@@ -33,18 +33,18 @@ export default function Programs() {
   ]
 
   return (
-    <section id="programs" className="py-16 bg-white">
+    <section id="programs" className="bg-[#f5f9ff] py-16 text-[#1a2b3d]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Programs</h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="mb-12 text-center text-4xl font-bold text-[#1a2b3d]">Our Programs</h2>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {programs.map(program => (
-            <div key={program.id} className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">{program.name}</h3>
-              <p className="text-amber-500 font-semibold mb-4">{program.age}</p>
-              <p className="text-gray-700 mb-6">{program.description}</p>
-              <p className="text-xl font-bold text-gray-900 mb-4">{program.price}</p>
-              <button className="w-full bg-amber-500 text-gray-900 py-2 rounded-lg font-bold hover:bg-amber-600 transition">
+            <div key={program.id} className="theme-panel rounded-2xl p-8 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <h3 className="mb-2 text-2xl font-bold text-[#1a2b3d]">{program.name}</h3>
+              <p className="mb-4 font-semibold text-[#b9872d]">{program.age}</p>
+              <p className="mb-6 text-[#355f8a]">{program.description}</p>
+              <p className="mb-4 text-xl font-bold text-[#1a2b3d]">{program.price}</p>
+              <button className="w-full rounded-xl border border-[#d7b36a]/60 bg-[#d7b36a] px-4 py-2.5 font-bold text-[#1a2b3d] transition hover:bg-[#e7c57d]">
                 Enroll
               </button>
             </div>

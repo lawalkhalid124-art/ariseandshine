@@ -6,16 +6,123 @@
 
 :root {
   --font-hero: 'Tourney', 'Staatliches', 'Righteous', 'Poppins', sans-serif;
+  --site-bg-1: #edf5ff;
+  --site-bg-2: #e8f0fb;
+  --site-bg-3: #dfeaf8;
+  --brand-primary: #1d4f7a;
+  --brand-primary-deep: #153a5a;
+  --brand-secondary: #d7b36a;
+  --brand-secondary-deep: #b9872d;
+  --brand-soft: #f7fbff;
+  --theme-navy-900: #1a2b3d;
+  --theme-navy-800: #213a50;
+  --theme-blue-700: #355f8a;
+  --theme-blue-600: #466f9d;
+  --theme-gold-400: #d7b36a;
+  --theme-gold-500: #caa55b;
+  --theme-gold-600: #b98c3c;
+  --theme-surface: rgba(255, 255, 255, 0.72);
+  --theme-surface-strong: rgba(255, 255, 255, 0.9);
+  --theme-text: #1c2d3f;
+  --theme-text-soft: #52657b;
 }
 
-/* Set Oswald as the global site font */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
 html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background:
+    radial-gradient(circle at top left, rgba(130, 170, 214, 0.26), transparent 22%),
+    radial-gradient(circle at bottom right, rgba(215, 179, 106, 0.16), transparent 20%),
+    linear-gradient(180deg, var(--site-bg-1) 0%, var(--site-bg-2) 38%, #f6f9fc 100%);
+  color: var(--theme-text);
+}
+
+body {
+  background-attachment: fixed;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--theme-navy-900);
+}
+
+p, li, span, a, button {
+  font-weight: 500;
+}
+
+::selection {
+  background: rgba(215, 179, 106, 0.28);
+}
+
+.theme-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 239, 248, 0.92));
+  border: 1px solid rgba(215, 179, 106, 0.45);
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
+  color: #1a2b3d;
+}
+
+.theme-panel-soft {
+  background: linear-gradient(135deg, rgba(244, 248, 252, 0.98), rgba(224, 236, 249, 0.9));
+  border: 1px solid rgba(215, 179, 106, 0.35);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+  color: #1a2b3d;
+}
+
+.theme-accent {
+  color: var(--brand-secondary-deep);
+}
+
+.theme-panel input,
+.theme-panel textarea {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(26, 43, 61, 0.14);
+  color: #1a2b3d;
+}
+
+.theme-panel input::placeholder,
+.theme-panel textarea::placeholder {
+  color: rgba(26, 43, 61, 0.58);
 }
 
 .font-hero {
-  font-family: var(--font-hero);
+  font-family: var(--font-hero), sans-serif;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(26px) scale(0.985);
+  filter: blur(8px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
 }

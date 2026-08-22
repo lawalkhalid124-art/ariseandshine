@@ -10,16 +10,16 @@ export default function Teams() {
   ]
 
   return (
-    <section id="teams" className="py-16 bg-white">
+    <section id="teams" className="bg-[#f5f9ff] py-16 text-[#1a2b3d]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Teams</h2>
+        <h2 className="mb-12 text-center text-4xl font-bold text-[#1a2b3d]">Our Teams</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-3">
           {teams.map(team => (
-            <div key={team.id} className="p-6 rounded-lg bg-gradient-to-br from-amber-100 to-red-100 hover:scale-105 transition shadow">
-              <div className="text-6xl text-amber-500 mb-4">⚽</div>
-              <h3 className="text-2xl font-bold text-gray-900">{team.name}</h3>
-              <p className="text-gray-700 mt-2">{team.desc}</p>
+            <div key={team.id} className="theme-panel rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <div className="mb-4 text-6xl text-[#b9872d]">⚽</div>
+              <h3 className="text-2xl font-bold text-[#1a2b3d]">{team.name}</h3>
+              <p className="mt-2 text-[#355f8a]">{team.desc}</p>
             </div>
           ))}
         </div>
