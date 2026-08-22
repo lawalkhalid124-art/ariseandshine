@@ -1,48 +1,52 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../images/arise_shine-logo.png'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-[#edf4fb] py-12 text-[#1a2b3d]">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="mb-8 grid gap-8 md:grid-cols-4">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <img src={logo} alt="Arise and Shine Logo" className="h-8 w-8 object-contain" />
-              <h3 className="text-xl font-bold text-amber-500">Arise & Shine</h3>
+            <div className="mb-4 flex items-center space-x-3">
+              <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain rounded-full border border-[#d7b36a]/40 bg-white/90" />
+              <h3 className="text-xl font-bold text-[#1a2b3d]">Arise & Shine FA</h3>
             </div>
-            <p className="text-gray-400">Developing champions on and off the pitch.</p>
+            <p className="text-[#355f8a]">Developing champions on and off the pitch.</p>
           </div>
+
           <div>
-            <h4 className="font-bold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#home" className="hover:text-amber-500">Home</a></li>
-              <li><a href="#about" className="hover:text-amber-500">About</a></li>
-              <li><a href="#programs" className="hover:text-amber-500">Programs</a></li>
-              <li><a href="#contact" className="hover:text-amber-500">Contact</a></li>
+            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#b9872d]">Quick Links</h4>
+            <ul className="space-y-2 text-[#1a2b3d]">
+              <li><Link to="/" className="transition hover:text-[#b9872d]">Home</Link></li>
+              <li><Link to="/about" className="transition hover:text-[#b9872d]">About</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Programs</Link></li>
+              <li><Link to="/contact" className="transition hover:text-[#b9872d]">Contact</Link></li>
             </ul>
           </div>
+
           <div>
-            <h4 className="font-bold text-white mb-4">Programs</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-amber-500">Youth Academy</a></li>
-              <li><a href="#" className="hover:text-amber-500">Junior Development</a></li>
-              <li><a href="#" className="hover:text-amber-500">Elite Program</a></li>
-              <li><a href="#" className="hover:text-amber-500">Girls Football</a></li>
+            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#b9872d]">Programs</h4>
+            <ul className="space-y-2 text-[#1a2b3d]">
+              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Youth Academy</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Junior Development</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Elite Program</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Girls Football</Link></li>
             </ul>
           </div>
+
           <div>
-            <h4 className="font-bold text-white mb-4">Follow Us</h4>
-            <div className="space-y-2 text-gray-400">
-              <p><a href="#" className="hover:text-amber-500">Facebook</a></p>
-              <p><a href="#" className="hover:text-amber-500">Instagram</a></p>
-              <p><a href="#" className="hover:text-amber-500">Twitter</a></p>
-              <p><a href="#" className="hover:text-amber-500">YouTube</a></p>
+            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#b9872d]">Follow Us</h4>
+            <div className="space-y-2 text-[#1a2b3d]">
+              <p><a href="#" className="transition hover:text-[#b9872d]">Facebook</a></p>
+              <p><a href="#" className="transition hover:text-[#b9872d]">Instagram</a></p>
+              <p><a href="#" className="transition hover:text-[#b9872d]">Twitter</a></p>
+              <p><a href="#" className="transition hover:text-[#b9872d]">YouTube</a></p>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
+        <div className="border-t border-[#1a2b3d]/10 pt-8 text-center text-[#1a2b3d]">
           <p>&copy; 2024 Arise and Shine Football Academy. All rights reserved.</p>
         </div>
       </div>

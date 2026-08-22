@@ -9,22 +9,22 @@ export default function Membership() {
   ]
 
   return (
-    <section id="membership" className="py-16 bg-gray-50">
+    <section id="membership" className="bg-[#f5f9ff] py-16 text-[#1a2b3d]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Membership Plans</h2>
+        <h2 className="mb-12 text-center text-4xl font-bold text-[#1a2b3d]">Membership Plans</h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-3">
           {plans.map(plan => (
-            <div key={plan.id} className="rounded-lg p-6 bg-gradient-to-br from-amber-200 to-amber-400 hover:from-amber-300 hover:to-red-500 transition shadow-md flex flex-col">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">{plan.name}</h3>
-              <p className="text-3xl font-extrabold text-gray-900 mb-4">{plan.price}</p>
-              <ul className="mb-6 space-y-2 flex-grow">
+            <div key={plan.id} className="theme-panel flex flex-col rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <h3 className="mb-4 text-2xl font-bold text-[#1a2b3d]">{plan.name}</h3>
+              <p className="mb-4 text-3xl font-extrabold text-[#b9872d]">{plan.price}</p>
+              <ul className="mb-6 flex-grow space-y-2 text-[#355f8a]">
                 {plan.perks.map((p, i) => (
-                  <li key={i} className="text-gray-700">• {p}</li>
+                  <li key={i}>• {p}</li>
                 ))}
               </ul>
-              <div className="flex justify-center mt-4">
-                <InteractiveHoverButton text={`Join ${plan.name}`} className="bg-red-600 text-white border-red-600 w-56 h-14 text-base !p-3 !rounded-2xl" />
+              <div className="mt-4 flex justify-center">
+                <InteractiveHoverButton text={`Join ${plan.name}`} className="w-56 border-[#d7b36a]/50 bg-[#d7b36a] text-[#1a2b3d] h-14 text-base !p-3 !rounded-2xl" />
               </div>
             </div>
           ))}

@@ -9,8 +9,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain" />
-            <span className="text-xl font-bold">Arise & Shine</span>
+            <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain rounded-full border border-amber-500/40 bg-white/90" />
+            <span className="text-xl font-bold">Arise & Shine FA</span>
           </div>
 
           <div className="hidden md:flex space-x-8">
