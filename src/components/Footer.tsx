@@ -9,39 +9,39 @@ export default function Footer() {
         <div className="mb-8 grid gap-8 md:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center space-x-3">
-              <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain rounded-full border border-[#d7b36a]/40 bg-white/90" />
+              <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain rounded-full border border-[#f6c14a]/40 bg-white/90" />
               <h3 className="text-xl font-bold text-[#1a2b3d]">Arise & Shine FA</h3>
             </div>
             <p className="text-[#355f8a]">Developing champions on and off the pitch.</p>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#b9872d]">Quick Links</h4>
+            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#d79017]">Quick Links</h4>
             <ul className="space-y-2 text-[#1a2b3d]">
-              <li><Link to="/" className="transition hover:text-[#b9872d]">Home</Link></li>
-              <li><Link to="/about" className="transition hover:text-[#b9872d]">About</Link></li>
-              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Programs</Link></li>
-              <li><Link to="/contact" className="transition hover:text-[#b9872d]">Contact</Link></li>
+              <li><Link to="/" className="transition hover:text-[#d79017]">Home</Link></li>
+              <li><Link to="/about" className="transition hover:text-[#d79017]">About</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#d79017]">Programs</Link></li>
+              <li><Link to="/contact" className="transition hover:text-[#d79017]">Contact</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#b9872d]">Programs</h4>
+            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#d79017]">Programs</h4>
             <ul className="space-y-2 text-[#1a2b3d]">
-              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Youth Academy</Link></li>
-              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Junior Development</Link></li>
-              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Elite Program</Link></li>
-              <li><Link to="/programs" className="transition hover:text-[#b9872d]">Girls Football</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#d79017]">Youth Academy</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#d79017]">Junior Development</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#d79017]">Elite Program</Link></li>
+              <li><Link to="/programs" className="transition hover:text-[#d79017]">Girls Football</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#b9872d]">Follow Us</h4>
+            <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#d79017]">Follow Us</h4>
             <div className="space-y-2 text-[#1a2b3d]">
-              <p><a href="#" className="transition hover:text-[#b9872d]">Facebook</a></p>
-              <p><a href="#" className="transition hover:text-[#b9872d]">Instagram</a></p>
-              <p><a href="#" className="transition hover:text-[#b9872d]">Twitter</a></p>
-              <p><a href="#" className="transition hover:text-[#b9872d]">YouTube</a></p>
+              <p><a href="#" className="transition hover:text-[#d79017]">Facebook</a></p>
+              <p><a href="#" className="transition hover:text-[#d79017]">Instagram</a></p>
+              <p><a href="#" className="transition hover:text-[#d79017]">Twitter</a></p>
+              <p><a href="#" className="transition hover:text-[#d79017]">YouTube</a></p>
             </div>
           </div>
         </div>

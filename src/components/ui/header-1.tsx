@@ -36,19 +36,19 @@ export function Header() {
 			className={cn(
 				'sticky top-0 z-50 w-full border-b border-transparent transition-all duration-300',
 				{
-					'border-[#d7b36a]/30 bg-[#1a2b3d]/85 shadow-lg shadow-[#1a2b3d]/20 backdrop-blur-xl': scrolled,
+					'border-[#f6c14a]/30 bg-[#1a2b3d]/85 shadow-lg shadow-[#1a2b3d]/20 backdrop-blur-xl': scrolled,
 					'bg-[#1a2b3d]/90': !scrolled,
 				},
 			)}
 		>
 			<nav className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
 				<Link to="/" className="flex items-center gap-3 rounded-full px-2 py-1.5 transition hover:bg-white/5">
-					<div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#d7b36a]/50 bg-white/90 shadow-sm shadow-[#d7b36a]/30">
+					<div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#f6c14a]/50 bg-white/90 shadow-sm shadow-[#f6c14a]/30">
 						<img src={logo} alt="Arise and Shine Football Academy logo" className="h-full w-full object-cover" />
 					</div>
 					<div className="flex flex-col leading-none">
 						<span className="hidden text-base font-bold tracking-[0.12em] text-white sm:inline">ARISE & SHINE FA</span>
-						<span className="hidden text-[10px] font-semibold uppercase tracking-[0.24em] text-[#d7b36a] sm:block">In God We Trust</span>
+						<span className="hidden text-[10px] font-semibold uppercase tracking-[0.24em] text-[#f6c14a] sm:block">In God We Trust</span>
 					</div>
 				</Link>
 
@@ -58,7 +58,7 @@ export function Header() {
 							key={link.label}
 							className={cn(
 								buttonVariants({ variant: 'ghost' }),
-								'text-sm font-medium text-slate-200 transition hover:text-[#d7b36a]',
+								'text-sm font-medium text-slate-200 transition hover:text-[#f6c14a]',
 							)}
 							to={link.href}
 						>
@@ -71,7 +71,7 @@ export function Header() {
 					size="icon"
 					variant="outline"
 					onClick={() => setOpen(!open)}
-					className="md:hidden border-[#d7b36a]/40 bg-[#355f8a]/10 text-[#f4dcc0] shadow-lg shadow-[#355f8a]/20"
+					className="md:hidden border-[#f6c14a]/40 bg-[#355f8a]/10 text-[#f4dcc0] shadow-lg shadow-[#355f8a]/20"
 					aria-expanded={open}
 					aria-controls="mobile-menu"
 					aria-label="Toggle menu"
@@ -88,7 +88,7 @@ export function Header() {
 							className={cn(
 								buttonVariants({
 									variant: 'ghost',
-									className: 'justify-start text-slate-200 hover:text-[#d7b36a]',
+									className: 'justify-start text-slate-200 hover:text-[#f6c14a]',
 								}),
 							)}
 							to={link.href}

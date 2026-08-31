@@ -40,28 +40,28 @@ export default function Contact() {
             <h3 className="mb-6 text-2xl font-bold text-[#1a2b3d]">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#b9872d]">📍</span>
+                <span className="text-2xl text-[#d79017]">📍</span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Location</p>
                   <p className="text-[#355f8a]">123 Football Lane, Sports City</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#b9872d]">📞</span>
+                <span className="text-2xl text-[#d79017]">📞</span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Phone</p>
                   <p className="text-[#355f8a]">+1 (555) 123-4567</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#b9872d]">✉️</span>
+                <span className="text-2xl text-[#d79017]">✉️</span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Email</p>
                   <p className="text-[#355f8a]">info@ariseandshine.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#b9872d]">🕐</span>
+                <span className="text-2xl text-[#d79017]">🕐</span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Hours</p>
                   <p className="text-[#355f8a]">Mon-Fri: 9AM - 6PM</p>
@@ -71,7 +71,7 @@ export default function Contact() {
             </div>
             <div className="mt-8 border-t border-[#1a2b3d]/10 pt-8">
               <p className="mb-4 font-semibold text-[#355f8a]">Ready to join us?</p>
-              <InteractiveHoverButton text="Enroll Now" className="w-56 border-[#d7b36a]/50 bg-[#d7b36a] text-[#1a2b3d] h-14 text-base !p-3 !rounded-2xl" />
+              <InteractiveHoverButton text="Enroll Now" className="w-56 border-[#f6c14a]/50 bg-[#f6c14a] text-[#1a2b3d] h-14 text-base !p-3 !rounded-2xl" />
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#d7b36a]"
+              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
             />
             <input
               type="email"
@@ -92,7 +92,7 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#d7b36a]"
+              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
             />
             <input
               type="tel"
@@ -100,7 +100,7 @@ export default function Contact() {
               placeholder="Your Phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#d7b36a]"
+              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
             />
             <textarea
               name="message"
@@ -109,9 +109,9 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#d7b36a]"
+              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
             />
-            <InteractiveHoverButton text="Send Message" className="w-full h-14 border-[#d7b36a]/50 bg-[#d7b36a] text-[#1a2b3d] text-base !p-3 !rounded-xl" />
+            <InteractiveHoverButton text="Send Message" className="w-full h-14 border-[#f6c14a]/50 bg-[#f6c14a] text-[#1a2b3d] text-base !p-3 !rounded-xl" />
           </form>
         </div>
       </div>

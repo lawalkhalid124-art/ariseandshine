@@ -17,14 +17,14 @@ export default function Membership() {
           {plans.map(plan => (
             <div key={plan.id} className="theme-panel flex flex-col rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <h3 className="mb-4 text-2xl font-bold text-[#1a2b3d]">{plan.name}</h3>
-              <p className="mb-4 text-3xl font-extrabold text-[#b9872d]">{plan.price}</p>
+              <p className="mb-4 text-3xl font-extrabold text-[#d79017]">{plan.price}</p>
               <ul className="mb-6 flex-grow space-y-2 text-[#355f8a]">
                 {plan.perks.map((p, i) => (
                   <li key={i}>• {p}</li>
                 ))}
               </ul>
               <div className="mt-4 flex justify-center">
-                <InteractiveHoverButton text={`Join ${plan.name}`} className="w-56 border-[#d7b36a]/50 bg-[#d7b36a] text-[#1a2b3d] h-14 text-base !p-3 !rounded-2xl" />
+                <InteractiveHoverButton text={`Join ${plan.name}`} className="w-56 border-[#f6c14a]/50 bg-[#f6c14a] text-[#1a2b3d] h-14 text-base !p-3 !rounded-2xl" />
               </div>
             </div>
           ))}

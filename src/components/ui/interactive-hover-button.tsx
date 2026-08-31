@@ -15,7 +15,7 @@ const InteractiveHoverButton = React.forwardRef<
   InteractiveHoverButtonProps
 >(({ text = "Button", className, href, to, type = "button", ...props }, ref) => {
   const sharedClassName = cn(
-    "group relative w-32 cursor-pointer overflow-hidden rounded-full border border-[#d7b36a]/60 bg-[#1a2b3d] p-2 text-center font-semibold text-white shadow-lg shadow-[#1a2b3d]/20 transition-all duration-300 hover:border-[#d7b36a] hover:shadow-[#d7b36a]/15",
+    "group relative w-32 cursor-pointer overflow-hidden rounded-full border border-[#f6c14a]/60 bg-[#1a2b3d] p-2 text-center font-semibold text-white shadow-lg shadow-[#1a2b3d]/20 transition-all duration-300 hover:border-[#f6c14a] hover:shadow-[#f6c14a]/15",
     className,
   );
 
@@ -28,7 +28,7 @@ const InteractiveHoverButton = React.forwardRef<
         <span>{text}</span>
         <ArrowRight />
       </div>
-      <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-[#d7b36a] transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-[#d7b36a]"></div>
+      <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-[#f6c14a] transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-[#f6c14a]"></div>
     </>
   );
 

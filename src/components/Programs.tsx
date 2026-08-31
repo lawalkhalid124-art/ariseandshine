@@ -41,10 +41,10 @@ export default function Programs() {
           {programs.map(program => (
             <div key={program.id} className="theme-panel rounded-2xl p-8 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
               <h3 className="mb-2 text-2xl font-bold text-[#1a2b3d]">{program.name}</h3>
-              <p className="mb-4 font-semibold text-[#b9872d]">{program.age}</p>
+              <p className="mb-4 font-semibold text-[#d79017]">{program.age}</p>
               <p className="mb-6 text-[#355f8a]">{program.description}</p>
               <p className="mb-4 text-xl font-bold text-[#1a2b3d]">{program.price}</p>
-              <button className="w-full rounded-xl border border-[#d7b36a]/60 bg-[#d7b36a] px-4 py-2.5 font-bold text-[#1a2b3d] transition hover:bg-[#e7c57d]">
+              <button className="w-full rounded-xl border border-[#f6c14a]/60 bg-[#f6c14a] px-4 py-2.5 font-bold text-[#1a2b3d] transition hover:bg-[#f8d673]">
                 Enroll
               </button>
             </div>

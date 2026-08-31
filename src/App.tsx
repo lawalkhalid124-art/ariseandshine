@@ -57,7 +57,7 @@ export default function App() {
           <Hero />
           <About />
           <Programs />
-          <Gallery />
+          <Gallery featured />
         </>} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
