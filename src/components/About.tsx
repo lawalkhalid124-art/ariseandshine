@@ -1,4 +1,5 @@
 import React from 'react'
+import { Award, Medal, ShieldCheck, Star } from 'lucide-react'
 import aboutImage from '@/images/compImg/img5.webp'
 
 const values = [
@@ -57,8 +58,8 @@ export default function About() {
           <div className="space-y-6">
             <div className="grid gap-6 md:grid-cols-2">
               <article className="theme-panel rounded-[24px] p-6 shadow-[0_18px_35px_rgba(20,32,48,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_42px_rgba(20,32,48,0.08)]">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f6c14a] text-lg font-bold text-[#1a2b3d]">
-                  V
+               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f6c14a] text-[#1a2b3d]">
+                 <Star className="h-5 w-5" />
                 </div>
                 <h3 className="mb-3 text-2xl font-bold text-[#1a2b3d]">Vision</h3>
                 <p className="text-base font-semibold leading-7 text-[#355f8a]">
@@ -67,8 +68,8 @@ export default function About() {
               </article>
 
               <article className="theme-panel rounded-[24px] p-6 shadow-[0_18px_35px_rgba(20,32,48,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_42px_rgba(20,32,48,0.08)]">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#1f3d5c] text-lg font-bold text-white">
-                  M
+               <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#1f3d5c] text-white">
+                 <ShieldCheck className="h-5 w-5" />
                 </div>
                 <h3 className="mb-3 text-2xl font-bold text-[#1a2b3d]">Mission</h3>
                 <p className="text-base font-semibold leading-7 text-[#355f8a]">
@@ -79,8 +80,8 @@ export default function About() {
 
             <article className="theme-panel rounded-[24px] p-6 shadow-[0_18px_35px_rgba(20,32,48,0.05)]">
               <div className="mb-4 flex items-center gap-3">
-               <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f6c14a] text-lg font-bold text-[#1a2b3d]">
-                  ★
+               <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#f6c14a] text-[#1a2b3d]">
+                 <Medal className="h-5 w-5" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1a2b3d]">Our Motto</h3>
               </div>
@@ -120,7 +121,10 @@ export default function About() {
             <div className="theme-panel rounded-[24px] p-6 shadow-[0_18px_35px_rgba(20,32,48,0.05)]">
               <h3 className="mb-4 text-2xl font-bold text-[#1a2b3d]">Achievements</h3>
               <div className="rounded-2xl bg-[#f6c14a] p-4">
-                <p className="text-lg font-bold text-[#1a2b3d]">🏆 2026 Ikorodu Divisional League Champions</p>
+                <div className="flex items-center gap-3">
+                  <Award className="h-5 w-5 text-[#1a2b3d]" />
+                  <p className="text-lg font-bold text-[#1a2b3d]">2026 Ikorodu Divisional League Champions</p>
+                </div>
               </div>
               <p className="mt-4 text-sm font-semibold leading-6 text-[#355f8a]">
                 This section can be expanded with league titles, trophies, player call-ups, and alumni success stories.

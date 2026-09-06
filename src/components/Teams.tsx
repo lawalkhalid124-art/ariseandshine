@@ -1,4 +1,5 @@
 import React from 'react'
+import { Trophy } from 'lucide-react'
 
 export default function Teams() {
   const teams = [
@@ -17,7 +18,9 @@ export default function Teams() {
         <div className="grid gap-8 md:grid-cols-3">
           {teams.map(team => (
             <div key={team.id} className="theme-panel rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <div className="mb-4 text-6xl text-[#d79017]">⚽</div>
+              <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]">
+                <Trophy className="h-8 w-8" />
+              </div>
               <h3 className="text-2xl font-bold text-[#1a2b3d]">{team.name}</h3>
               <p className="mt-2 text-[#355f8a]">{team.desc}</p>
             </div>

@@ -46,9 +46,9 @@ export function Header() {
 					<div className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-[#f6c14a]/50 bg-white/90 shadow-sm shadow-[#f6c14a]/30">
 						<img src={logo} alt="Arise and Shine Football Academy logo" className="h-full w-full object-cover" />
 					</div>
-					<div className="flex flex-col leading-none">
-						<span className="hidden text-base font-bold tracking-[0.12em] text-white sm:inline">ARISE & SHINE FA</span>
-						<span className="hidden text-[10px] font-semibold uppercase tracking-[0.24em] text-[#f6c14a] sm:block">In God We Trust</span>
+					<div className="flex min-w-0 flex-col leading-none">
+						<span className="text-[9px] font-bold uppercase tracking-[0.12em] text-white sm:text-base">ARISE & SHINE FA</span>
+						<span className="mt-0.5 text-[7px] font-semibold uppercase tracking-[0.18em] text-[#f6c14a] sm:text-[10px] sm:tracking-[0.24em]">In God We Trust</span>
 					</div>
 				</Link>
 

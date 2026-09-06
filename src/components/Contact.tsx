@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Clock3, Mail, MapPin, Phone } from 'lucide-react'
 import { InteractiveHoverButton } from './ui/interactive-hover-button'
 
 interface FormData {
@@ -40,28 +41,28 @@ export default function Contact() {
             <h3 className="mb-6 text-2xl font-bold text-[#1a2b3d]">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#d79017]">📍</span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><MapPin className="h-5 w-5" /></span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Location</p>
                   <p className="text-[#355f8a]">123 Football Lane, Sports City</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#d79017]">📞</span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><Phone className="h-5 w-5" /></span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Phone</p>
                   <p className="text-[#355f8a]">+1 (555) 123-4567</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#d79017]">✉️</span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><Mail className="h-5 w-5" /></span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Email</p>
                   <p className="text-[#355f8a]">info@ariseandshine.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="text-2xl text-[#d79017]">🕐</span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><Clock3 className="h-5 w-5" /></span>
                 <div>
                   <p className="font-bold text-[#1a2b3d]">Hours</p>
                   <p className="text-[#355f8a]">Mon-Fri: 9AM - 6PM</p>

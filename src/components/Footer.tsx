@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="mb-8 grid gap-8 md:grid-cols-4">
           <div>
             <div className="mb-4 flex items-center space-x-3">
-              <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain rounded-full border border-[#f6c14a]/40 bg-white/90" />
+              <img src={logo} alt="Arise and Shine Football Academy logo" className="h-10 w-10 object-contain rounded-full border border-[#f6c14a]/40 bg-white/90" />
               <h3 className="text-xl font-bold text-[#1a2b3d]">Arise & Shine FA</h3>
             </div>
             <p className="text-[#355f8a]">Developing champions on and off the pitch.</p>

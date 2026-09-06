@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Menu } from 'lucide-react'
 import logo from '../images/arise_shine-logo.png'
 
 export default function Navbar() {
@@ -9,7 +10,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src={logo} alt="Arise and Shine Logo" className="h-10 w-10 object-contain rounded-full border border-amber-500/40 bg-white/90" />
+            <img src={logo} alt="Arise and Shine Football Academy logo" className="h-10 w-10 object-contain rounded-full border border-amber-500/40 bg-white/90" />
             <span className="text-xl font-bold">Arise & Shine FA</span>
           </div>
 
@@ -24,9 +25,10 @@ export default function Navbar() {
 
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-amber-500 text-2xl"
+            className="md:hidden text-amber-500"
+            aria-label="Toggle navigation menu"
           >
-            ☰
+            <Menu className="h-7 w-7" />
           </button>
         </div>
 

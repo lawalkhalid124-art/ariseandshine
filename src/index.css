@@ -53,6 +53,30 @@ body {
   background-attachment: fixed;
 }
 
+@media (max-width: 767px) {
+  html {
+    scroll-behavior: auto;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 section {
   scroll-margin-top: 96px;
 }
@@ -114,17 +138,12 @@ p, li, span, a, button {
   font-weight: 700;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(26px) scale(0.985);
-  filter: blur(8px);
-  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease;
-}
-
+.reveal,
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0) scale(1);
-  filter: blur(0);
+  transform: none;
+  filter: none;
+  transition: none;
 }
 
 .gallery-grid {
