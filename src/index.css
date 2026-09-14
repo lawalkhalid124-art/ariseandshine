@@ -53,6 +53,21 @@ body {
   background-attachment: fixed;
 }
 
+*, *::before, *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+[class*='shadow-'],
+[class*='drop-shadow-'],
+[class*='bg-gradient-'],
+[class*='from-'],
+[class*='via-'],
+[class*='to-'] {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
 @media (max-width: 767px) {
   html {
     scroll-behavior: auto;
@@ -102,16 +117,14 @@ p, li, span, a, button {
 }
 
 .theme-panel {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(232, 239, 248, 0.92));
+  background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(215, 179, 106, 0.45);
-  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.08);
   color: #1a2b3d;
 }
 
 .theme-panel-soft {
-  background: linear-gradient(135deg, rgba(244, 248, 252, 0.98), rgba(224, 236, 249, 0.9));
+  background: rgba(244, 248, 252, 0.98);
   border: 1px solid rgba(215, 179, 106, 0.35);
-  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
   color: #1a2b3d;
 }
 

@@ -32,7 +32,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="mb-12 overflow-hidden rounded-[28px] border border-[#f6c14a]/25 bg-gradient-to-r from-[#162d45] via-[#1e3d5d] to-[#365f8c] p-7 shadow-[0_25px_50px_rgba(17,31,49,0.16)] lg:p-10">
+        <div className="mb-12 overflow-hidden rounded-[28px] border border-[#f6c14a]/25 bg-[#1d3d5d] p-7 shadow-[0_25px_50px_rgba(17,31,49,0.16)] lg:p-10">
           <div className="grid gap-8 lg:grid-cols-[1.35fr_0.95fr] lg:items-center">
             <div>
               <p className="max-w-2xl text-base font-semibold leading-8 text-slate-100 sm:text-lg">
@@ -44,7 +44,7 @@ export default function About() {
 
             <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-white/5 shadow-[0_18px_35px_rgba(15,23,42,0.18)]">
               <img src={aboutImage} alt="Arise and Shine Academy football session" className="h-[260px] w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b2d]/75 via-[#0f1b2d]/20 to-transparent" />
+              <div className="absolute inset-0 bg-[#0f1b2d]/60" />
               <div className="absolute inset-x-0 bottom-0 p-5 text-left">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#f5d79c]">Founded</p>
                 <p className="mt-2 text-3xl font-black text-white">2012</p>

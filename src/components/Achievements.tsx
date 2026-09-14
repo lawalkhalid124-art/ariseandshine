@@ -11,7 +11,7 @@ export default function Achievements() {
         <h2 className="text-4xl font-bold text-center mb-12">Achievements</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {achievements.map(a => (
-            <div key={a.id} className="p-6 bg-gradient-to-br from-amber-100 to-amber-300 rounded-lg shadow">
+            <div key={a.id} className="rounded-lg bg-amber-100 p-6">
               <h3 className="text-xl font-bold">{a.title}</h3>
             </div>
           ))}

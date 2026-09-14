@@ -4,7 +4,7 @@ import { InteractiveHoverButton } from './ui/interactive-hover-button'
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${heroBg})` }}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(215,179,106,0.22),transparent_28%),linear-gradient(90deg,rgba(15,27,45,0.82),rgba(15,27,45,0.46),rgba(15,27,45,0.7))]"></div>
+      <div className="absolute inset-0 bg-[#162d45]/60"></div>
       <div className="relative z-10 flex min-h-screen items-center">
         <div className="container mx-auto px-4 py-20 text-center">
           <h1 className="mb-6 text-4xl font-bold leading-tight tracking-wider drop-shadow-[0_4px_18px_rgba(0,0,0,0.45)] md:text-6xl lg:text-7xl font-hero" style={{ color: '#ffffff' }}>Arise and Shine Football Academy</h1>
