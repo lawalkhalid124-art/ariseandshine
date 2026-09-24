@@ -109,14 +109,40 @@ export default function App() {
     const revealItems = document.querySelectorAll('section, [data-reveal]')
 
     revealItems.forEach((element) => {
-      element.classList.remove('reveal', 'is-visible')
+      if (element instanceof HTMLElement && !element.closest('header, footer, nav, .fixed')) {
+        element.classList.remove('reveal', 'is-visible')
+        element.classList.add('reveal')
+      }
     })
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -30px 0px',
+      },
+    )
+
+    revealItems.forEach((element) => {
+      if (element instanceof HTMLElement && !element.closest('header, footer, nav, .fixed')) {
+        observer.observe(element)
+      }
+    })
+
+    return () => observer.disconnect()
   }, [location.pathname])
 
   return (
-    <div className="min-h-screen bg-transparent text-slate-900">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
       <Header />
-    <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 pb-2 pt-4 text-sm text-[#355f8a] sm:px-6 lg:px-8">
+    <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 pb-2 pt-4 text-sm text-[var(--gold)] sm:px-6 lg:px-8">
       <ol className="flex flex-wrap items-center gap-2">
         {breadcrumbs.map((crumb, index) => {
           const isLast = index === breadcrumbs.length - 1
@@ -125,9 +151,9 @@ export default function App() {
             <li key={crumb.href} className="flex items-center gap-2">
               {index > 0 && <span aria-hidden="true">/</span>}
               {isLast ? (
-                <span className="font-semibold text-[#1a2b3d]">{crumb.label}</span>
+                <span className="font-semibold text-[var(--text-primary)]">{crumb.label}</span>
               ) : (
-                <Link to={crumb.href} className="transition hover:text-[#d79017]">
+                <Link to={crumb.href} className="transition hover:text-[var(--gold)]">
                   {crumb.label}
                 </Link>
               )}
@@ -140,7 +166,6 @@ export default function App() {
       <Route path="/" element={<>
         <Hero />
         <About />
-        <Programs />
         <Gallery featured />
       </>} />
       <Route path="/about" element={<About />} />
@@ -158,13 +183,13 @@ export default function App() {
       <div className="fixed inset-x-3 bottom-3 z-50 flex gap-2 md:hidden">
         <a
           href="tel:+15551234567"
-          className="flex flex-1 items-center justify-center rounded-2xl border border-[#f6c14a]/60 bg-[#1a2b3d] px-4 py-3 text-sm font-bold tracking-[0.08em] text-white shadow-lg shadow-[#1a2b3d]/30"
+          className="flex flex-1 items-center justify-center rounded-2xl border border-[var(--border-gold)] bg-[var(--bg-card)] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[var(--text-primary)] shadow-lg shadow-black/30"
         >
           Call Us
         </a>
         <Link
           to="/contact"
-          className="flex flex-1 items-center justify-center rounded-2xl border border-[#f6c14a] bg-[#f6c14a] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[#1a2b3d] shadow-lg shadow-[#f6c14a]/30"
+          className="flex flex-1 items-center justify-center rounded-2xl border border-[var(--gold)] bg-[var(--gold)] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[var(--bg-primary)] shadow-lg shadow-[rgba(212,160,23,0.25)]"
         >
           Enroll Now
         </Link>

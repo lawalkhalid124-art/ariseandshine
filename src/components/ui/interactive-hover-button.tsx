@@ -8,27 +8,36 @@ interface InteractiveHoverButtonProps
   text?: string;
   href?: string;
   to?: string;
+  variant?: "primary" | "secondary";
 }
 
 const InteractiveHoverButton = React.forwardRef<
   HTMLButtonElement,
   InteractiveHoverButtonProps
->(({ text = "Button", className, href, to, type = "button", ...props }, ref) => {
+>(({ text = "Button", className, href, to, type = "button", variant = "primary", ...props }, ref) => {
   const sharedClassName = cn(
-    "group relative w-32 cursor-pointer overflow-hidden rounded-full border border-[#f6c14a]/60 bg-[#1a2b3d] p-2 text-center font-semibold text-white shadow-lg shadow-[#1a2b3d]/20 transition-all duration-300 hover:border-[#f6c14a] hover:shadow-[#f6c14a]/15",
+    "group relative w-32 cursor-pointer overflow-hidden rounded-full px-5 py-3 text-center text-[14px] font-bold uppercase tracking-[0.08em] transition-all duration-300",
+    variant === "primary"
+      ? "border border-[var(--gold)] bg-[var(--gold)] text-[var(--bg-primary)] shadow-[0_12px_24px_rgba(212,160,23,0.18)] hover:bg-[var(--gold-hover)] hover:scale-[1.02]"
+      : "border border-[rgba(255,255,255,0.45)] bg-transparent text-[var(--text-primary)] hover:border-[var(--gold)] hover:bg-[var(--gold)] hover:text-[var(--bg-primary)] hover:scale-[1.02]",
     className,
   );
 
   const content = (
     <>
-      <span className="inline-block translate-x-1 transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">
-        {text}
-      </span>
-      <div className="absolute top-0 z-10 flex h-full w-full translate-x-12 items-center justify-center gap-2 text-white opacity-0 transition-all duration-300 group-hover:-translate-x-1 group-hover:opacity-100">
+      <span className="inline-flex items-center justify-between gap-3 transition-all duration-300 group-hover:opacity-0">
         <span>{text}</span>
-        <ArrowRight />
+        {variant === "primary" ? <ArrowRight className="h-4 w-4" /> : null}
+      </span>
+
+      <div className="absolute inset-0 z-10 flex items-center justify-between gap-3 px-5 opacity-0 transition-all duration-300 group-hover:opacity-100">
+        <span>{text}</span>
+        <ArrowRight className="h-4 w-4" />
       </div>
-      <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-[#f6c14a] transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-[#f6c14a]"></div>
+
+      {variant === "primary" ? (
+        <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-lg bg-[rgba(232,181,46,0.75)] transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-[rgba(232,181,46,0.75)]"></div>
+      ) : null}
     </>
   );
 

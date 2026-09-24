@@ -23,16 +23,16 @@ export default function Testimonials() {
   ]
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[var(--bg-primary)]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">What People Say</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-[var(--text-primary)]">What People Say</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map(testimonial => (
-            <div key={testimonial.id} className="bg-gray-50 rounded-lg p-8 border-l-4 border-amber-500">
-              <p className="text-gray-700 mb-6 italic">"{testimonial.quote}"</p>
-              <p className="font-bold text-gray-900">{testimonial.name}</p>
-              <p className="text-amber-500 font-semibold">{testimonial.role}</p>
+            <div key={testimonial.id} className="bg-[var(--bg-card)] rounded-lg p-8 border-l-4 border-[var(--gold)] shadow-sm">
+              <p className="text-[var(--text-muted)] mb-6 italic">"{testimonial.quote}"</p>
+              <p className="font-bold text-[var(--text-primary)]">{testimonial.name}</p>
+              <p className="text-[var(--gold)] font-semibold">{testimonial.role}</p>
             </div>
           ))}
         </div>

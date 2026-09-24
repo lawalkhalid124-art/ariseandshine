@@ -32,47 +32,47 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-[#f5f9ff] py-16 text-[#1a2b3d]">
+    <section id="contact" className="bg-[var(--bg-primary)] py-16 text-[var(--text-primary)]">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-4xl font-bold text-[#1a2b3d]">Get In Touch</h2>
+        <h2 className="mb-12 text-center text-4xl font-bold text-[var(--text-primary)]">Get In Touch</h2>
 
         <div className="mx-auto grid max-w-4xl gap-12 md:grid-cols-2">
           <div className="theme-panel rounded-2xl p-8">
-            <h3 className="mb-6 text-2xl font-bold text-[#1a2b3d]">Contact Information</h3>
+            <h3 className="mb-6 text-2xl font-bold text-[var(--text-primary)]">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><MapPin className="h-5 w-5" /></span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/10 text-[var(--gold)]"><MapPin className="h-5 w-5" /></span>
                 <div>
-                  <p className="font-bold text-[#1a2b3d]">Location</p>
-                  <p className="text-[#355f8a]">123 Football Lane, Sports City</p>
+                  <p className="font-bold text-[var(--text-primary)]">Location</p>
+                  <p className="text-[var(--text-muted)]">123 Football Lane, Sports City</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><Phone className="h-5 w-5" /></span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/10 text-[var(--gold)]"><Phone className="h-5 w-5" /></span>
                 <div>
-                  <p className="font-bold text-[#1a2b3d]">Phone</p>
-                  <p className="text-[#355f8a]">+1 (555) 123-4567</p>
+                  <p className="font-bold text-[var(--text-primary)]">Phone</p>
+                  <p className="text-[var(--text-muted)]">+1 (555) 123-4567</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><Mail className="h-5 w-5" /></span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/10 text-[var(--gold)]"><Mail className="h-5 w-5" /></span>
                 <div>
-                  <p className="font-bold text-[#1a2b3d]">Email</p>
-                  <p className="text-[#355f8a]">info@ariseandshine.com</p>
+                  <p className="font-bold text-[var(--text-primary)]">Email</p>
+                  <p className="text-[var(--text-muted)]">info@ariseandshine.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[#f6c14a]/15 text-[#d79017]"><Clock3 className="h-5 w-5" /></span>
+                <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/10 text-[var(--gold)]"><Clock3 className="h-5 w-5" /></span>
                 <div>
-                  <p className="font-bold text-[#1a2b3d]">Hours</p>
-                  <p className="text-[#355f8a]">Mon-Fri: 9AM - 6PM</p>
-                  <p className="text-[#355f8a]">Sat-Sun: 8AM - 4PM</p>
+                  <p className="font-bold text-[var(--text-primary)]">Hours</p>
+                  <p className="text-[var(--text-muted)]">Mon-Fri: 9AM - 6PM</p>
+                  <p className="text-[var(--text-muted)]">Sat-Sun: 8AM - 4PM</p>
                 </div>
               </div>
             </div>
-            <div className="mt-8 border-t border-[#1a2b3d]/10 pt-8">
-              <p className="mb-4 font-semibold text-[#355f8a]">Ready to join us?</p>
-              <InteractiveHoverButton text="Enroll Now" className="w-56 border-[#f6c14a]/50 bg-[#f6c14a] text-[#1a2b3d] h-14 text-base !p-3 !rounded-2xl" />
+            <div className="mt-8 border-t border-[var(--border)] pt-8">
+              <p className="mb-4 font-semibold text-[var(--gold)]">Ready to join us?</p>
+              <InteractiveHoverButton text="Enroll Now" className="w-56 border-[var(--border-gold)] bg-[var(--gold)] text-[var(--bg-primary)] h-14 text-base !p-3 !rounded-2xl" />
             </div>
           </div>
 
@@ -84,7 +84,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
+              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
             />
             <input
               type="email"
@@ -93,7 +93,7 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
+              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
             />
             <input
               type="tel"
@@ -101,7 +101,7 @@ export default function Contact() {
               placeholder="Your Phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
+              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
             />
             <textarea
               name="message"
@@ -110,9 +110,9 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:border-[#f6c14a]"
+              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
             />
-            <InteractiveHoverButton text="Send Message" className="w-full h-14 border-[#f6c14a]/50 bg-[#f6c14a] text-[#1a2b3d] text-base !p-3 !rounded-xl" />
+            <InteractiveHoverButton text="Send Message" className="w-full h-14 border-[var(--border-gold)] bg-[var(--gold)] text-[var(--bg-primary)] text-base !p-3 !rounded-xl" />
           </form>
         </div>
       </div>

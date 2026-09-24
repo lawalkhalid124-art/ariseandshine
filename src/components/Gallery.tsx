@@ -48,17 +48,17 @@ export default function Gallery({ featured = false }: { featured?: boolean }) {
 
   return (
     <>
-      <section id="gallery" className="py-18 bg-slate-50/70">
+      <section id="gallery" className="py-18 bg-[var(--bg-primary)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex items-end justify-between gap-4">
             <div className="text-left">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.35em] text-amber-600">Our Story</p>
-              <h2 className="text-4xl font-bold text-slate-900 sm:text-5xl">Gallery</h2>
+              <p className="eyebrow mb-2 text-[var(--gold)]">Our Story</p>
+              <h2 className="text-4xl font-bold tracking-[-0.02em] text-[var(--text-primary)] sm:text-5xl">Gallery</h2>
             </div>
             {featured && (
               <Link
                 to="/gallery"
-                className="inline-flex items-center rounded-full border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 shadow-sm transition hover:border-amber-400 hover:text-amber-600"
+                className="inline-flex items-center rounded-full border border-[var(--gold)] bg-transparent px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.08em] text-[var(--gold)] transition-colors duration-300 hover:bg-[var(--gold)] hover:text-[var(--bg-primary)]"
               >
                 View more
               </Link>
@@ -82,7 +82,7 @@ export default function Gallery({ featured = false }: { featured?: boolean }) {
               >
                 <img src={image.src} alt={image.alt} className="h-full w-full object-cover" />
                 <div className="gallery-overlay">
-                  <span className="gallery-badge">Arise & Shine</span>
+                  <span className="gallery-badge">ARISE &amp; SHINE</span>
                   <figcaption>{image.title}</figcaption>
                 </div>
               </figure>

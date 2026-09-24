@@ -8,14 +8,14 @@ export default function Players() {
   ]
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-[var(--bg-primary)]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Players & Squads</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-[var(--text-primary)]">Players & Squads</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {squads.map(s => (
-            <div key={s.id} className="rounded-lg bg-amber-100 p-6">
-              <h3 className="text-2xl font-bold">{s.name}</h3>
-              <p className="text-gray-700 mt-2">Players: {s.players}</p>
+            <div key={s.id} className="rounded-lg bg-[var(--bg-card)] p-6 border border-[var(--border-gold)]">
+              <h3 className="text-2xl font-bold text-[var(--text-primary)]">{s.name}</h3>
+              <p className="text-[var(--text-muted)] mt-2">Players: {s.players}</p>
             </div>
           ))}
         </div>
