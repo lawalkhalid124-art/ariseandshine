@@ -23,10 +23,10 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-[1600px] flex-col lg:flex-row">
+      <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-[1600px] flex-col items-center justify-center pt-2 lg:min-h-screen lg:flex-row">
 
         {/* CONTENT PANEL — transparent on mobile (image shows through), solid bg on desktop */}
-        <div className="relative z-10 flex w-full flex-col justify-center px-6 py-24 sm:px-10 lg:w-[55%] lg:bg-[var(--bg-primary)] lg:px-16 xl:px-24">
+        <div className="relative z-10 flex w-full flex-col justify-center px-6 py-16 sm:px-10 lg:w-[55%] lg:bg-[var(--bg-primary)] lg:px-16 xl:px-24 lg:justify-center lg:pt-12 lg:pb-12" >
 
           <div className="flex items-center gap-3 text-[var(--gold)]">
             <span className="h-px w-10 bg-[var(--gold)]" />
@@ -42,7 +42,7 @@ export default function Hero() {
             Building champions. On the pitch. For life.
           </p>
 
-          <div className="mt-10 flex gap-8 border-t border-[var(--border)] pt-6 sm:gap-10">
+          <div className="mt-8 flex gap-6 border-t border-[var(--border)] pt-5 sm:gap-8">
             <div>
               <p className="font-hero text-2xl text-[var(--gold)] sm:text-3xl">2012</p>
               <p className="text-xs uppercase tracking-[0.1em] text-[var(--text-muted)]">Founded</p>
@@ -57,7 +57,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-wrap gap-4">
             <InteractiveHoverButton to="/contact" text="Enroll Now" variant="primary"
               className="h-14 !rounded-full !px-8 text-sm font-semibold" />
             <InteractiveHoverButton to="/programs" text="Learn More" variant="secondary"
