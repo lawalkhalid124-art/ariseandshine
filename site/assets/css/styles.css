@@ -1,5 +1,5 @@
 /* Arise & Shine FA — Theme tokens, fonts, badge, and scroll-reveal styles */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Tourney:wght@700&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
   --green:#0b7a3a; /* primary */
@@ -112,7 +112,7 @@ section > h2, .hero-title {font-family:'Tourney','Staatliches', 'Oswald', sans-s
 .btn:focus,.nav-toggle:focus{outline:3px solid rgba(11,122,58,0.25);outline-offset:2px}
 
 /* Display / hero font utility */
-.font-hero{font-family:'Tourney','Staatliches', 'Oswald', sans-serif;letter-spacing:0.03em}
+.font-hero{font-family:'Oswald','Space Grotesk',system-ui,sans-serif;letter-spacing:0.08em;text-transform:uppercase;font-weight:500;line-height:0.88;text-shadow:0 10px 28px rgba(0,0,0,0.24)}
 
 /* Full-bleed hero variations (used by React Hero component) */
 .hero-fullbleed{position:relative;overflow:hidden}
