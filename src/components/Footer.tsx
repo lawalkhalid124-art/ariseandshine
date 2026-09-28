@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Mail, Phone } from 'lucide-react'
 import logo from '../images/arise_shine-logo.png'
+
+const contactEmail = 'ariseandshinefootballacademy01@gmail.com'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -60,6 +63,24 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <div className="mt-5 space-y-2">
+              <a href="tel:+2349138239453" className="inline-flex items-center gap-2 text-sm text-[var(--gold)] transition-colors hover:text-[var(--gold-hover)]">
+                <Phone className="h-4 w-4 shrink-0" />
+                <span>+234 913 823 9453</span>
+              </a>
+              <a href="tel:+2347081889709" className="inline-flex items-center gap-2 text-sm text-[var(--gold)] transition-colors hover:text-[var(--gold-hover)]">
+                <Phone className="h-4 w-4 shrink-0" />
+                <span>+234 708 188 9709</span>
+              </a>
+              <a href={`mailto:${contactEmail}`} className="inline-flex items-center gap-2 break-all text-sm text-[var(--gold)] transition-colors hover:text-[var(--gold-hover)]">
+                <Mail className="h-4 w-4 shrink-0" />
+                <span>{contactEmail}</span>
+              </a>
+              <a href="https://wa.me/2349138239453" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-[var(--gold)] transition-colors hover:text-[var(--gold-hover)]">
+                <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-[var(--gold)] text-[9px] font-bold text-[var(--bg-primary)]">WA</span>
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
           </div>
 
           <div>

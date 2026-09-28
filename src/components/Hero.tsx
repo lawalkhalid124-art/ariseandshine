@@ -3,7 +3,7 @@ import { InteractiveHoverButton } from './ui/interactive-hover-button'
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen overflow-hidden bg-[var(--bg-primary)]">
+    <section id="home" className="relative min-h-[640px] overflow-hidden bg-[var(--bg-primary)] lg:min-h-screen">
 
       {/* MOBILE: full-bleed background image, hidden on lg+ */}
       <div className="absolute inset-0 lg:hidden">
@@ -11,49 +11,54 @@ export default function Hero() {
           src={heroBg}
           alt="Arise & Shine Football Academy players"
           className="h-full w-full object-cover"
-          style={{ filter: 'grayscale(20%) contrast(1.1) brightness(0.8)' }}
+          style={{
+            filter: 'grayscale(10%) contrast(1.08) brightness(0.9)',
+            objectPosition: '70% center',
+          }}
         />
         {/* scrim for legibility on mobile only */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(180deg, rgba(11,11,12,0.55) 0%, rgba(11,11,12,0.65) 35%, rgba(11,11,12,0.95) 100%)',
+              'linear-gradient(180deg, rgba(11,11,12,0.25) 0%, rgba(11,11,12,0.35) 25%, rgba(11,11,12,0.8) 60%, rgba(11,11,12,0.97) 100%)',
           }}
         />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-[1600px] flex-col items-center justify-center pt-2 lg:min-h-screen lg:flex-row">
+      <div className="relative z-10 mx-auto flex max-w-[1600px] flex-col lg:min-h-screen lg:flex-row">
 
         {/* CONTENT PANEL — transparent on mobile (image shows through), solid bg on desktop */}
-        <div className="relative z-10 flex w-full flex-col justify-center px-6 py-16 sm:px-10 lg:w-[55%] lg:bg-[var(--bg-primary)] lg:px-16 xl:px-24 lg:justify-center lg:pt-12 lg:pb-12" >
+        <div className="relative z-10 flex w-full flex-col justify-end px-5 pb-10 pt-32 sm:px-10 lg:w-[55%] lg:justify-center lg:bg-[var(--bg-primary)] lg:px-16 lg:py-24 xl:px-24" >
 
           <div className="flex items-center gap-3 text-[var(--gold)]">
-            <span className="h-px w-10 bg-[var(--gold)]" />
-            <p className="text-xs font-semibold uppercase tracking-[0.2em]">Grassroots Football Culture</p>
+            <span className="h-px w-8 shrink-0 bg-[var(--gold)]" />
+            <p className="whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--gold)] sm:text-xs sm:tracking-[0.2em]">
+              Football Academy
+            </p>
           </div>
 
-          <div className="mt-6 font-hero text-[3.5rem] leading-[0.88] tracking-[-0.02em] sm:text-[4.5rem] lg:text-[5.25rem]" style={{ fontFamily: '"Bebas Neue", sans-serif', textTransform: 'uppercase', letterSpacing: '0.08em', lineHeight: '0.88', textShadow: '0 10px 28px rgba(0, 0, 0, 0.24)' }}>
-            <div className="block text-[var(--text-primary)]">ARISE AND SHINE</div>
-            <div className="block text-[var(--gold)]">FOOTBALL ACADEMY</div>
-          </div>
+          <h1 className="mt-5 font-hero text-[2.9rem] uppercase min-[400px]:text-[3.25rem] sm:text-7xl lg:text-[4.75rem]" style={{ textShadow: '0 10px 28px rgba(0, 0, 0, 0.24)' }}>
+            <span className="block text-[var(--text-primary)]">ARISE AND SHINE</span>
+            <span className="block whitespace-nowrap text-[var(--gold)]">FOOTBALL ACADEMY</span>
+          </h1>
 
-          <p className="mt-6 max-w-[42ch] text-lg text-[var(--text-muted)] sm:text-xl">
+          <p className="mt-4 max-w-[36ch] text-base text-[var(--text-primary)]/85 sm:text-lg">
             Building champions. On the pitch. For life.
           </p>
 
-          <div className="mt-8 flex gap-6 border-t border-[var(--border)] pt-5 sm:gap-8">
-            <div>
-              <p className="font-hero text-2xl text-[var(--gold)] sm:text-3xl">2012</p>
-              <p className="text-xs uppercase tracking-[0.1em] text-[var(--text-muted)]">Founded</p>
+          <div className="mt-8 grid grid-cols-3 border-y border-[var(--border)] py-5">
+            <div className="pr-3">
+              <p className="font-hero text-3xl leading-none text-[var(--gold)]">2012</p>
+              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)] sm:text-xs">Founded</p>
             </div>
-            <div>
-              <p className="font-hero text-2xl text-[var(--gold)] sm:text-3xl">U8–U18</p>
-              <p className="text-xs uppercase tracking-[0.1em] text-[var(--text-muted)]">Age Groups</p>
+            <div className="border-x border-[var(--border)] px-3">
+              <p className="font-hero text-3xl leading-none text-[var(--gold)]">U8–U18</p>
+              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)] sm:text-xs">Age Groups</p>
             </div>
-            <div>
-              <p className="font-hero text-2xl text-[var(--gold)] sm:text-3xl">2026</p>
-              <p className="text-xs uppercase tracking-[0.1em] text-[var(--text-muted)]">League Champions</p>
+            <div className="pl-3">
+              <p className="font-hero text-3xl leading-none text-[var(--gold)]">2026</p>
+              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--text-muted)] sm:text-xs">Champions</p>
             </div>
           </div>
 

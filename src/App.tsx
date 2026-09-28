@@ -1,4 +1,5 @@
 import React from 'react'
+import { MessageCircle, Phone } from 'lucide-react'
 import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Header } from './components/ui/header-1'
 import Hero from './components/Hero'
@@ -180,19 +181,24 @@ export default function App() {
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
     {location.pathname !== '/contact' && (
-      <div className="fixed inset-x-3 bottom-3 z-50 flex gap-2 md:hidden">
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-3 md:bottom-6 md:right-6">
         <a
-          href="tel:+15551234567"
-          className="flex flex-1 items-center justify-center rounded-2xl border border-[var(--border-gold)] bg-[var(--bg-card)] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[var(--text-primary)] shadow-lg shadow-black/30"
+          href="https://wa.me/2349138239453"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat on WhatsApp"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_28px_rgba(37,211,102,0.45)] transition-transform duration-200 hover:scale-105"
         >
-          Call Us
+          <MessageCircle className="h-6 w-6" />
         </a>
-        <Link
-          to="/contact"
-          className="flex flex-1 items-center justify-center rounded-2xl border border-[var(--gold)] bg-[var(--gold)] px-4 py-3 text-sm font-bold tracking-[0.08em] text-[var(--bg-primary)] shadow-lg shadow-[rgba(212,160,23,0.25)]"
+
+        <a
+          href="tel:+2349138239453"
+          aria-label="Call now"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-[var(--gold)] text-[var(--bg-primary)] shadow-[0_14px_28px_rgba(212,160,23,0.35)] transition-transform duration-200 hover:scale-105"
         >
-          Enroll Now
-        </Link>
+          <Phone className="h-6 w-6" />
+        </a>
       </div>
     )}
     <Footer />

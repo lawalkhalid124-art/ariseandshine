@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Clock3, Mail, MapPin, Phone } from 'lucide-react'
 import { InteractiveHoverButton } from './ui/interactive-hover-button'
 
+const recipientEmail = 'ariseandshinefootballacademy01@gmail.com'
+
 interface FormData {
   name: string;
   email: string;
@@ -26,8 +28,13 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you! We will contact you soon.')
+
+    const subject = encodeURIComponent(`Academy enquiry from ${formData.name || 'new contact'}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || 'Not provided'}\n\nMessage:\n${formData.message}`
+    )
+
+    window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`
     setFormData({ name: '', email: '', phone: '', message: '' })
   }
 
@@ -51,14 +58,22 @@ export default function Contact() {
                 <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/10 text-[var(--gold)]"><Phone className="h-5 w-5" /></span>
                 <div>
                   <p className="font-bold text-[var(--text-primary)]">Phone</p>
-                  <p className="text-[var(--text-muted)]">+1 (555) 123-4567</p>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:+2349138239453" className="text-[var(--gold)] hover:text-[var(--gold-hover)]">+234 913 823 9453</a>
+                    <a href="tel:+2347081889709" className="text-[var(--gold)] hover:text-[var(--gold-hover)]">+234 708 188 9709</a>
+                  </div>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/10 text-[var(--gold)]"><Mail className="h-5 w-5" /></span>
                 <div>
                   <p className="font-bold text-[var(--text-primary)]">Email</p>
-                  <p className="text-[var(--text-muted)]">info@ariseandshine.com</p>
+                  <a
+                    href={`mailto:${recipientEmail}`}
+                    className="break-all text-[var(--gold)] transition-colors hover:text-[var(--gold-hover)]"
+                  >
+                    {recipientEmail}
+                  </a>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -72,7 +87,22 @@ export default function Contact() {
             </div>
             <div className="mt-8 border-t border-[var(--border)] pt-8">
               <p className="mb-4 font-semibold text-[var(--gold)]">Ready to join us?</p>
-              <InteractiveHoverButton text="Enroll Now" className="w-56 border-[var(--border-gold)] bg-[var(--gold)] text-[var(--bg-primary)] h-14 text-base !p-3 !rounded-2xl" />
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="tel:+2349138239453"
+                  className="flex h-14 w-full items-center justify-center rounded-2xl border border-[var(--border-gold)] bg-[var(--gold)] px-4 text-base font-semibold text-[var(--bg-primary)] transition-colors hover:opacity-95 sm:w-56"
+                >
+                  Enroll Now
+                </a>
+                <a
+                  href="https://wa.me/2349138239453"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-14 w-full items-center justify-center rounded-2xl border border-[var(--border-gold)] bg-[var(--bg-card)] px-4 text-base font-semibold text-[var(--text-primary)] transition-colors hover:border-[var(--gold)] hover:text-[var(--gold)] sm:w-56"
+                >
+                  Chat on WhatsApp
+                </a>
+              </div>
             </div>
           </div>
 
