@@ -80,7 +80,7 @@ export default function Gallery({ featured = false }: { featured?: boolean }) {
                 onClick={() => setSelectedImage(image)}
                 onKeyDown={(event) => handleKeyDown(event, image)}
               >
-                <img src={image.src} alt={image.alt} className="h-full w-full object-cover" />
+                <img src={image.src} alt={image.alt} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                 <div className="gallery-overlay">
                   <span className="gallery-badge">ARISE &amp; SHINE</span>
                   <figcaption>{image.title}</figcaption>
@@ -102,7 +102,7 @@ export default function Gallery({ featured = false }: { featured?: boolean }) {
             >
               ×
             </button>
-            <img src={selectedImage.src} alt={selectedImage.alt} className="gallery-modal-image" />
+            <img src={selectedImage.src} alt={selectedImage.alt} loading="eager" decoding="async" className="gallery-modal-image" />
             <div className="gallery-modal-caption">{selectedImage.title}</div>
           </div>
         </div>

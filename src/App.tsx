@@ -90,6 +90,16 @@ export default function App() {
 
     metaDescription.setAttribute('content', description)
 
+    let metaRobots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null
+
+    if (!metaRobots) {
+      metaRobots = document.createElement('meta')
+      metaRobots.setAttribute('name', 'robots')
+      document.head.appendChild(metaRobots)
+    }
+
+    metaRobots.setAttribute('content', 'index, follow')
+
     const canonicalUrl = `https://ariseandshinefa.com${location.pathname === '/' ? '' : location.pathname}`
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
 
