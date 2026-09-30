@@ -117,37 +117,16 @@ export default function App() {
   }, [location.pathname])
 
   React.useEffect(() => {
-    const revealItems = document.querySelectorAll('section, [data-reveal]')
+    const revealItems = Array.from(document.querySelectorAll('section, [data-reveal]'))
 
     revealItems.forEach((element) => {
-      if (element instanceof HTMLElement && !element.closest('header, footer, nav, .fixed')) {
-        element.classList.remove('reveal', 'is-visible')
-        element.classList.add('reveal')
-      }
+      if (!(element instanceof HTMLElement)) return
+      if (element.closest('header, footer, nav, .fixed')) return
+
+      element.classList.remove('reveal', 'is-visible')
     })
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible')
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      {
-        threshold: 0.12,
-        rootMargin: '0px 0px -30px 0px',
-      },
-    )
-
-    revealItems.forEach((element) => {
-      if (element instanceof HTMLElement && !element.closest('header, footer, nav, .fixed')) {
-        observer.observe(element)
-      }
-    })
-
-    return () => observer.disconnect()
+    return
   }, [location.pathname])
 
   return (

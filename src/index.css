@@ -354,6 +354,7 @@ p {
   .gallery-item {
     min-height: 260px;
     grid-column: auto;
+    grid-row: auto;
   }
 }
 

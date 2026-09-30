@@ -17,6 +17,21 @@ import img14 from '@/images/compImg/img14.webp'
 import img15 from '@/images/compImg/img15.webp'
 
 export default function Gallery({ featured = false }: { featured?: boolean }) {
+  const [isMobile, setIsMobile] = React.useState(() => {
+    if (typeof window === 'undefined') return false
+    return window.innerWidth < 768
+  })
+
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const onResize = () => setIsMobile(window.innerWidth < 768)
+    onResize()
+    window.addEventListener('resize', onResize)
+
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
   const images = [
     { id: 15, src: img15, alt: 'Football academy celebration', title: 'Moments That Matter', columns: 'span 5', rows: 'span 2' },
     { id: 8, src: img8, alt: 'Academy football action', title: 'Academy Energy', columns: 'span 3', rows: 'span 1' },
@@ -37,7 +52,7 @@ export default function Gallery({ featured = false }: { featured?: boolean }) {
 
   const [selectedImage, setSelectedImage] = React.useState<(typeof images)[number] | null>(null)
 
-  const visibleImages = featured ? images.slice(0, 3) : images
+  const visibleImages = featured ? images.slice(0, isMobile ? 2 : 3) : images
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>, image: (typeof images)[number]) => {
     if (event.key === 'Enter' || event.key === ' ') {
@@ -70,10 +85,14 @@ export default function Gallery({ featured = false }: { featured?: boolean }) {
               <figure
                 key={image.id}
                 className="gallery-item"
-                style={{
-                  gridColumn: image.columns,
-                  gridRow: image.rows,
-                }}
+                style={
+                  isMobile
+                    ? undefined
+                    : {
+                        gridColumn: image.columns,
+                        gridRow: image.rows,
+                      }
+                }
                 tabIndex={0}
                 role="button"
                 aria-label={`Open ${image.title} image`}
