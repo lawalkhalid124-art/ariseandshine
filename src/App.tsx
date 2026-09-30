@@ -90,7 +90,7 @@ export default function App() {
 
     metaDescription.setAttribute('content', description)
 
-    const canonicalUrl = `https://ariseandshine.com${location.pathname === '/' ? '' : location.pathname}`
+    const canonicalUrl = `https://ariseandshinefa.com${location.pathname === '/' ? '' : location.pathname}`
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
 
     if (!canonicalLink) {
