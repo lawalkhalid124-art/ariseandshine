@@ -4,11 +4,10 @@ import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Header } from './components/ui/header-1'
 import Hero from './components/Hero'
 import About from './components/About'
-import Programs from './components/Programs'
+// import Programs from './components/Programs'
 import Gallery from './components/Gallery'
-import Membership from './components/Membership'
 import Teams from './components/Teams'
-import Players from './components/Players'
+import Tournament from './components/Tournament'
 import News from './components/News'
 import Achievements from './components/Achievements'
 import Contact from './components/Contact'
@@ -37,6 +36,7 @@ export default function App() {
         gallery: 'Gallery',
         membership: 'Membership',
         teams: 'Teams',
+        tournament: 'Tournament',
         news: 'News & Updates',
         achievements: 'Achievements',
         contact: 'Contact Us',
@@ -57,6 +57,7 @@ export default function App() {
       '/gallery': 'Gallery',
       '/membership': 'Membership',
       '/teams': 'Teams',
+      '/tournament': 'Tournament',
       '/news': 'News & Updates',
       '/achievements': 'Achievements',
       '/contact': 'Contact Us',
@@ -70,6 +71,7 @@ export default function App() {
       '/gallery': 'Browse photos and moments from Arise & Shine training, matches, events, and community experiences.',
       '/membership': 'Join Arise & Shine and access elite training opportunities, academy support, and a pathway to football growth and excellence.',
       '/teams': 'Discover the teams, competitions, and football culture behind Arise & Shine and the players shaping our academy identity.',
+      '/tournament': 'Explore our upcoming tournaments, fixtures, and competitive opportunities that help players grow through match experience and discipline.',
       '/news': 'Stay updated with the latest Arise & Shine football news, events, player highlights, and academy milestones.',
       '/achievements': 'Celebrate Arise & Shine achievements, milestones, and proud moments that reflect our passion for football excellence.',
       '/contact': 'Get in touch with Arise & Shine for academy enquiries, partnerships, and football opportunities.',
@@ -159,11 +161,10 @@ export default function App() {
         <Gallery featured />
       </>} />
       <Route path="/about" element={<About />} />
-      <Route path="/programs" element={<Programs />} />
-      <Route path="/players" element={<Players />} />
+      {/*<Route path="/programs" element={<Programs />} />*/}
       <Route path="/gallery" element={<Gallery />} />
-      <Route path="/membership" element={<Membership />} />
       <Route path="/teams" element={<Teams />} />
+      <Route path="/tournament" element={<Tournament />} />
       <Route path="/news" element={<News />} />
       <Route path="/achievements" element={<Achievements />} />
       <Route path="/contact" element={<Contact />} />

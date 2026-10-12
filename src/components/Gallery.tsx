@@ -15,6 +15,14 @@ import img12 from '@/images/compImg/img12.webp'
 import img13 from '@/images/compImg/img13.webp'
 import img14 from '@/images/compImg/img14.webp'
 import img15 from '@/images/compImg/img15.webp'
+import img17 from '@/images/compImg/img17.png'
+import img18 from '@/images/compImg/img18.png'
+import img19 from '@/images/compImg/img19.png'
+import img20 from '@/images/compImg/img20.png'
+import img21 from '@/images/compImg/img21.png'
+import img22 from '@/images/compImg/im22.png'
+import img23 from '@/images/compImg/img23.png'
+import img24 from '@/images/compImg/img24.png'
 
 export default function Gallery({ featured = false }: { featured?: boolean }) {
   const [isMobile, setIsMobile] = React.useState(() => {
@@ -38,13 +46,21 @@ export default function Gallery({ featured = false }: { featured?: boolean }) {
     { id: 4, src: img4, alt: 'Player dribbling during practice', title: 'Skill Build', columns: 'span 4', rows: 'span 1' },
     { id: 10, src: img10, alt: 'Footballers in a stadium moment', title: 'Big Stage', columns: 'span 4', rows: 'span 2' },
     { id: 1, src: img1, alt: 'Football training at Arise and Shine', title: 'Training Focus', columns: 'span 3', rows: 'span 1' },
+    { id: 17, src: img17, alt: 'U8 training session', title: 'U8 Confidence', columns: 'span 4', rows: 'span 1' },
     { id: 6, src: img6, alt: 'Coaching session with players', title: 'Coaching', columns: 'span 5', rows: 'span 1' },
     { id: 11, src: img11, alt: 'Academy players watching instructions', title: 'Coach Guidance', columns: 'span 4', rows: 'span 2' },
+    { id: 20, src: img20, alt: 'U10 dribbling drill', title: 'U10 Skills', columns: 'span 3', rows: 'span 1' },
     { id: 2, src: img2, alt: 'Team huddle before a match', title: 'Match Day', columns: 'span 3', rows: 'span 1' },
     { id: 13, src: img13, alt: 'Group photo after training', title: 'After Training', columns: 'span 3', rows: 'span 1' },
     { id: 7, src: img7, alt: 'Young athletes in action', title: 'Youth Talent', columns: 'span 4', rows: 'span 1' },
+    { id: 23, src: img23, alt: 'U12 tactical training', title: 'U12 Tactical Work', columns: 'span 5', rows: 'span 1' },
     { id: 12, src: img12, alt: 'Community sports activity', title: 'Community', columns: 'span 5', rows: 'span 1' },
     { id: 3, src: img3, alt: 'Players celebrating together', title: 'Team Spirit', columns: 'span 3', rows: 'span 2' },
+    { id: 18, src: img18, alt: 'Passing practice and teamwork', title: 'Passing Patterns', columns: 'span 4', rows: 'span 1' },
+    { id: 19, src: img19, alt: 'U12 match play', title: 'U12 Matchday', columns: 'span 5', rows: 'span 1' },
+    { id: 21, src: img21, alt: 'U10 team exercise', title: 'U10 Movement', columns: 'span 3', rows: 'span 1' },
+    { id: 22, src: img22, alt: 'Team photo during training', title: 'Group Focus', columns: 'span 4', rows: 'span 1' },
+    { id: 24, src: img24, alt: 'U12 celebration session', title: 'U12 Growth', columns: 'span 5', rows: 'span 1' },
     { id: 9, src: img9, alt: 'Player laying a pass', title: 'Playmaker', columns: 'span 4', rows: 'span 1' },
     { id: 14, src: img14, alt: 'Players in a tactical exercise', title: 'Tactical Work', columns: 'span 5', rows: 'span 1' },
     { id: 5, src: img5, alt: 'Camp session with ball work', title: 'Camp Session', columns: 'span 5', rows: 'span 2' },

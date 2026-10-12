@@ -15,8 +15,8 @@ export function Header() {
 
 	const links = [
 		{ label: 'Gallery', href: '/gallery' },
-		{ label: 'Membership', href: '/membership' },
 		{ label: 'Teams', href: '/teams' },
+		{ label: 'Tournament', href: '/tournament' },
 		{ label: 'Contact', href: '/contact' },
 	];
 

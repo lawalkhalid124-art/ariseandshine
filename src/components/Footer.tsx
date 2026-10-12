@@ -12,6 +12,7 @@ export default function Footer() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Gallery', href: '/gallery' },
+    { label: 'Tournament', href: '/tournament' },
     { label: 'Contact', href: '/contact' },
   ]
 

@@ -18,8 +18,9 @@ export default function Navbar() {
             <a href="#home" className="transition hover:text-[var(--gold)]">Home</a>
             <a href="#about" className="transition hover:text-[var(--gold)]">About</a>
             <a href="#gallery" className="transition hover:text-[var(--gold)]">Gallery</a>
-            <a href="#membership" className="transition hover:text-[var(--gold)]">Membership</a>
+            {/*<a href="#membership" className="transition hover:text-[var(--gold)]">Membership</a>*/}
             <a href="#teams" className="transition hover:text-[var(--gold)]">Teams</a>
+            <a href="#tournament" className="transition hover:text-[var(--gold)]">Tournament</a>
             <a href="#contact" className="transition hover:text-[var(--gold)]">Contact</a>
           </div>
 
@@ -37,8 +38,9 @@ export default function Navbar() {
             <a href="#home" className="block hover:text-[var(--gold)]">Home</a>
             <a href="#about" className="block hover:text-[var(--gold)]">About</a>
             <a href="#gallery" className="block hover:text-[var(--gold)]">Gallery</a>
-            <a href="#membership" className="block hover:text-[var(--gold)]">Membership</a>
+            {/*<a href="#membership" className="block hover:text-[var(--gold)]">Membership</a>*/}
             <a href="#teams" className="block hover:text-[var(--gold)]">Teams</a>
+            <a href="#tournament" className="block hover:text-[var(--gold)]">Tournament</a>
             <a href="#contact" className="block hover:text-[var(--gold)]">Contact</a>
           </div>
         )}

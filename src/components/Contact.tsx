@@ -12,6 +12,8 @@ interface FormData {
 }
 
 export default function Contact() {
+  const inputClassName = 'w-full rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]'
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -114,7 +116,7 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
+              className={inputClassName}
             />
             <input
               type="email"
@@ -123,7 +125,7 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
+              className={inputClassName}
             />
             <input
               type="tel"
@@ -131,7 +133,7 @@ export default function Contact() {
               placeholder="Your Phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
+              className={inputClassName}
             />
             <textarea
               name="message"
@@ -140,7 +142,7 @@ export default function Contact() {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--gold)] focus:ring-4 focus:ring-[rgba(212,160,23,0.18)]"
+              className={inputClassName}
             />
             <InteractiveHoverButton text="Send Message" className="w-full h-14 border-[var(--border-gold)] bg-[var(--gold)] text-[var(--bg-primary)] text-base !p-3 !rounded-xl" />
           </form>
