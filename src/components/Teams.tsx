@@ -55,6 +55,7 @@ export default function Teams() {
   ]
 
   const [selectedTeam, setSelectedTeam] = React.useState<(typeof teams)[number] | null>(null)
+  const getImagePosition = (teamName: string) => (teamName === 'U10s' ? 'center center' : 'center 18%')
 
   return (
     <>
@@ -85,7 +86,7 @@ export default function Teams() {
                   <img
                     src={team.image}
                     alt={`${team.name} team`}
-                    style={{ objectPosition: 'center 18%' }}
+                    style={{ objectPosition: getImagePosition(team.name) }}
                     className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
@@ -137,7 +138,7 @@ export default function Teams() {
               <img
                 src={selectedTeam.image}
                 alt={`${selectedTeam.name} team`}
-                style={{ objectPosition: 'center 18%' }}
+                style={{ objectPosition: getImagePosition(selectedTeam.name) }}
                 className="h-56 w-full object-cover md:h-full md:min-h-[260px]"
               />
 

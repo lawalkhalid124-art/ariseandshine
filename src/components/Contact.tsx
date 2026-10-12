@@ -53,7 +53,7 @@ export default function Contact() {
                 <span className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-[var(--gold)]/10 text-[var(--gold)]"><MapPin className="h-5 w-5" /></span>
                 <div>
                   <p className="font-bold text-[var(--text-primary)]">Location</p>
-                  <p className="text-[var(--text-muted)]">123 Football Lane, Sports City</p>
+                  <p className="text-[var(--text-muted)]">7 Aliyu Imam, Agbele Rd, opp. police barracks playground, Ikorodu, 104101, Lagos</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
